@@ -22,8 +22,12 @@ def main():
         "ra":"ラ","ri":"リ","ru":"ル", "re":"レ", "ro":"ロ",
         "ya":"ヤ","yu":"ユ", "yo":"ヨ",
         "wa":"ワ", "(w)o":"ヲ", "n":"ン"}
+    
+    kanji = {"ichi (1)":"一", "ni (2)":"二", "san (3)":"三", "yon/shi (4)":"四", "go (5)":"五",
+        "roku (6)":"六", "nana/shichi (7)":"七", "hachi (8)":"八", "kyu/ku (9)":"九", "juu (10)":"十",
+        "ko (child)":"子", "watashi (I, me)":"私"}
 
-    alphabet = input("hiragana or katanana?\n")
+    alphabet = input("hiragana, katanana, or kanji?\n")
     
     cont = True
 
@@ -33,6 +37,8 @@ def main():
             key,val = random.choice(list(hiragana.items()))
         elif alphabet == "katakana":
             key,val = random.choice(list(katakana.items()))
+        elif alphabet == "kanji":
+            key,val = random.choice(list(kanji.items()))
         print(key)
         check = input("\nCheck answer?\n")
         print(val)
